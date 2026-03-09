@@ -1,0 +1,153 @@
+{
+  "projectType": "saas",
+  "projectName": "identiPay",
+  "projectDescription": "Privacy-first payment protocol enabling secure, cardless transactions using verified digital identities with zero-knowledge proofs.",
+  "theme": "aspen",
+  "primaryColor": "#040404",
+  "lightColor": null,
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "architecture"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/identity-system",
+              "concepts/payment-intents",
+              "concepts/settlement",
+              "concepts/stealth-addresses",
+              "concepts/shielded-pool"
+            ]
+          },
+          {
+            "group": "User Apps",
+            "pages": [
+              "apps/wallet",
+              "apps/pos"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Integration",
+        "groups": [
+          {
+            "group": "Merchant Setup",
+            "pages": [
+              "integration/getting-started",
+              "integration/merchant-registration",
+              "integration/authentication"
+            ]
+          },
+          {
+            "group": "Payment Flow",
+            "pages": [
+              "integration/checkout",
+              "integration/payment-requests",
+              "integration/transaction-status",
+              "integration/webhooks"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "integration/age-gating",
+              "integration/warranties",
+              "integration/receipts"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api/overview",
+              "api/merchants",
+              "api/pay-requests",
+              "api/transactions",
+              "api/proposals",
+              "api/intents",
+              "api/names",
+              "api/announcements"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Protocol",
+        "groups": [
+          {
+            "group": "Smart Contracts",
+            "pages": [
+              "protocol/overview",
+              "protocol/settlement-contract",
+              "protocol/shielded-pool-contract",
+              "protocol/trust-registry",
+              "protocol/meta-address-registry"
+            ]
+          },
+          {
+            "group": "Zero-Knowledge Circuits",
+            "pages": [
+              "protocol/zk-overview",
+              "protocol/identity-registration",
+              "protocol/age-verification",
+              "protocol/pool-spend"
+            ]
+          },
+          {
+            "group": "Security",
+            "pages": [
+              "protocol/security-model",
+              "protocol/privacy-guarantees"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Zero-knowledge identity verification",
+    "Intent-based payment flow",
+    "Stealth address privacy",
+    "Atomic settlement on Sui blockchain",
+    "Shielded pool for transaction privacy",
+    "Age-gated commerce support",
+    "Encrypted receipts and warranties",
+    "Meta-address naming system"
+  ],
+  "publicApiSurface": [
+    "POST /api/identipay/v1/merchants",
+    "GET /api/identipay/v1/merchants/:id",
+    "POST /api/identipay/v1/pay-requests",
+    "GET /api/identipay/v1/pay-requests/:id",
+    "POST /api/identipay/v1/transactions",
+    "GET /api/identipay/v1/transactions/:id",
+    "POST /api/identipay/v1/proposals",
+    "GET /api/identipay/v1/proposals/:intentHash",
+    "POST /api/identipay/v1/intents",
+    "GET /api/identipay/v1/intents/:hash",
+    "GET /api/identipay/v1/names/:metaAddress",
+    "POST /api/identipay/v1/names/resolve",
+    "GET /api/identipay/v1/announcements",
+    "WS /ws/transactions/:txId",
+    "identipay::settlement::execute_commerce",
+    "identipay::shielded_pool::deposit",
+    "identipay::shielded_pool::withdraw",
+    "identipay::trust_registry::register_identity",
+    "identipay::meta_address_registry::register"
+  ]
+}
